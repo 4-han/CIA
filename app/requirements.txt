@@ -1,0 +1,12 @@
+pandas
+tqdm
+openai==1.80.0
+elasticsearch 
+scikit-learn 
+ipywidgets
+python-dotenv
+python-telegram-bot
+psycopg2-binary     
+python-dotenv       
+google-generativeai
+markdown
