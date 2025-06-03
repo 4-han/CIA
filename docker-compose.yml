@@ -28,7 +28,35 @@ services:
       - ./data:/data
     depends_on:
       - db 
-
+  grafana:
+    image: grafana/grafana:latest # Use the official Grafana image
+    container_name: rag_grafana
+    restart: always
+    user: root # Sometimes needed for volume permissions, adjust if security is critical
+    ports:
+      - "3000:3000" # Default Grafana port: Map host_port:container_port
+    volumes:
+      # Persist Grafana data (dashboards, configuration)
+      - grafana_data:/var/lib/grafana
+      # Optional: Mount a custom provisioning directory for data sources/dashboards
+      # - ./grafana/provisioning:/etc/grafana/provisioning
+    env_file:
+      - .env # Load .env for Grafana specific variables (optional, but good practice)
+    environment:
+      # Configure Grafana initial admin user/password (use variables from .env)
+      GF_SECURITY_ADMIN_USER: ${GRAFANA_ADMIN_USER:-admin} # Default to 'admin' if not set in .env
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD:-admin} # Default to 'admin' if not set in .env
+      # Ensure Grafana connects to the DB service using the service name 'db'
+      # You might need to set these if provisioning data sources automatically,
+      # but we'll do manual setup first.
+      # GF_DATABASE_TYPE: postgres
+      # GF_DATABASE_HOST: db:${DB_PORT}
+      # GF_DATABASE_NAME: ${DB_NAME}
+      # GF_DATABASE_USER: ${DB_USER}
+      # GF_DATABASE_PASSWORD: ${DB_PASSWORD}
+    depends_on:
+      - db 
 
 volumes:
   db_data:
+  grafana_data: 

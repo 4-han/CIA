@@ -1,0 +1,13 @@
+pandas
+selenium
+requests
+bs4
+pymupdf
+tqdm
+scikit-learn 
+ipywidgets
+dotenv
+chromedriver-autoinstaller    
+python-dotenv       
+webdriver-manager
+markdown
