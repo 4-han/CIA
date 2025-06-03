@@ -176,7 +176,12 @@ pgcli -h localhost -p 5432 -U rag_user -d rag_db ```
 -p 5432: Specifies the port mapped from the container to your host.
 -U rag_user: Specifies the database user (replace rag_user with your DB_USER).
 -d rag_db: Specifies the database name (replace rag_db with your DB_NAME).
+```
 
+* For Information about ingestion pipeline refer [ingestion](ingestion.md) and [text-extraction](text-extract.md)
+* For Ground Truth Evaluation refer [Ground Truth](GT-generation.md) or [notebook](./notebooks/ground_truth.ipynb)
+* For Retreval evaluation refer  [EVAL](./notebooks/evaluation_retrival.ipynb) or  [Retrival](retreval.md)
+* for RAG evaluation refer [RAG](./notebooks/RAG-eval.ipynb)
 
 ## Future Enhancements
 
