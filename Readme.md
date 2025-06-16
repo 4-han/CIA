@@ -5,8 +5,9 @@ This project develops a Telegram chatbot designed to act as a **RAG (Retrieval-A
 
 ## Video Walkthrough
 <a href="https://www.loom.com/share/a79d9d258d544f5d92a00385f06d37fc">
-  <img src="./images/thumbnail.png" alt="Watch on Loom" />
+  <img src="./images/thumbnail.png" alt="Watch on Loom" width="300" />
 </a>
+
 
 ## Project Structure
 ![project flow loading](./images/flow.png)
