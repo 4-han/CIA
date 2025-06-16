@@ -3,6 +3,10 @@
 
 This project develops a Telegram chatbot designed to act as a **RAG (Retrieval-Augmented Generation)** assistant, providing information about the National Institute of Technology Warangal (NITW). The bot retrieves information from the [official website](https://nitw.ac.in) and uses a **Large Language Model (LLM)** to generate informative and context-aware responses, helping students navigate the college environment more efficiently even with ambigious queries that other llms couldn't understand.
 
+## Video Walkthrough
+<a href="https://www.loom.com/share/a79d9d258d544f5d92a00385f06d37fc">
+  <img src="./images/thumbnail.png" alt="Watch on Loom" />
+</a>
 
 ## Project Structure
 ![project flow loading](./images/flow.png)
